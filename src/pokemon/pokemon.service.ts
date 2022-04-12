@@ -23,4 +23,5 @@ export class PokemonService{
                         map(response => response.data)
                     )
     }
+
 }

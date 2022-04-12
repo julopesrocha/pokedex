@@ -11,11 +11,11 @@ export class PokemonController {
 
     @Get()
     async getAll(){
-        let pokemons = await this.pokemonService.findAll();
-        pokemons.subscribe((bla) => {
-            pokes => new NestResponseBuilder().useBody(pokemons).build();
-        })
-        return pokemons
+        let pokemons = this.pokemonService.findAll();
+        // new NestResponseBuilder()
+        //             .useBody(pokemons)
+        //             .build();
+        return pokemons;
     }
 
     @UseInterceptors(ClassSerializerInterceptor)
