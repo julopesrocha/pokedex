@@ -17,8 +17,8 @@ export class NestResponseBuilder {
     public useBody(body: any) {
         console.log(body)
         this.response.id = body.id;
-        this.response.forms.name = body.forms.name;
-        this.response.sprites.front_default = body.sprites.front_default;
+        this.response.forms = body.forms;
+        this.response.sprites = body.sprites;
         this.response.abilities = body.abilities;
         this.response.stats = body.stats;
         return this;
